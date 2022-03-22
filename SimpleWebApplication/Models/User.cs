@@ -31,7 +31,7 @@ namespace SimpleWebApplication.Models
             {
                 connection.Open();
 
-                SqlCommand usersCmd = new SqlCommand("SELECT * FROM Users", connection);
+                SqlCommand usersCmd = new SqlCommand("SELECT UserID, Name, Email, FirstName, LastName FROM Users", connection);
 
                 SqlDataReader reader = usersCmd.ExecuteReader();
 
